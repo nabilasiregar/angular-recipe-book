@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Ingredient } from './shared/ingredient.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-udemy-project';
+  loadedNavbar = 'recipes';
+
+  onNavigate(navbar: string) {
+    this.loadedNavbar = navbar;
+  }
+
+  public ingredients: Ingredient[] = [
+    new Ingredient('Large shallots', 6),
+    new Ingredient('Garlic cloves', 5)
+  ]
 }
