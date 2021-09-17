@@ -1,6 +1,9 @@
+import { EventEmitter } from '@angular/core'
 import { Recipe } from './recipe.model'
 
 export class RecipeService {
+  recipeSelected = new EventEmitter<Recipe>()
+
   private recipes: Recipe[] = [
     new Recipe('Caramelized Shallot Pasta', 
     'This pasta is all about the shallots, cooked down in a bath of olive oil to a jammy, caramelized paste.',
@@ -10,7 +13,5 @@ export class RecipeService {
     'https://static01.nyt.com/images/2021/09/08/dining/03MOONCAKEREX1-pistachio-honey-mooncake/merlin_194033367_9230d531-e73c-49ca-b63f-73aa806bfa26-articleLarge.jpg')
   ]
 
-  getRecipes() {
-    return this.recipes.slice()
-  }
+  getRecipes() { return this.recipes.slice() }
 }

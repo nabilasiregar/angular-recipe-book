@@ -4,7 +4,7 @@
             <button class="btn btn-success">Create New Recipe</button>
             <div class="row">
                 <div class="col-8 col-sm-6">
-                    <app-recipe-item *ngFor="let recipeItem of recipes" [recipe]="recipeItem"  (recipeSelected)="onRecipeSelected(recipeItem)"></app-recipe-item>
+                    <app-recipe-item *ngFor="let recipeItem of recipes" [recipe]="recipeItem"></app-recipe-item>
                 </div>
                 <div class="col-4 col-sm-6">
                     
